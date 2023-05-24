@@ -26,6 +26,7 @@
         "clean": "rm -rf dist es cjs",
         "generate-docs": "jsdoc -c ./.jsdoc.json",
         "coverage:unit": "cross-env BABEL_ENV=coverage nyc --reporter=lcov npm run test:unit",
+        "prepare": "npm run build",
         "coverage:integration": "cross-env BABEL_ENV=coverage nyc --reporter=lcov npm run test:integration"
     },
     "files": [
