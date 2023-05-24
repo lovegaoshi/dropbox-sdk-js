@@ -56,11 +56,10 @@ export default class DropboxAuth {
       /* eslint-enable no-restricted-globals */
     } else {
       fetch = require('node-fetch'); // eslint-disable-line global-require
-      crypto = require('crypto'); // eslint-disable-line global-require
     }
 
     if (typeof TextEncoder === 'undefined') {
-      Encoder = require('util').TextEncoder; // eslint-disable-line global-require
+      Encoder = null; // eslint-disable-line global-require
     } else {
       Encoder = TextEncoder;
     }
